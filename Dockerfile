@@ -1,4 +1,4 @@
-FROM onnno/ubuntu
+FROM onnno/ubuntu:16.04-0.1.0
 
 MAINTAINER Dong Li "docker@lidong.me”
 
