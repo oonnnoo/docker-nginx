@@ -42,7 +42,7 @@ COPY nginx.conf /usr/local/nginx/conf/nginx.conf
 # "/usr/local/nginx/logs" Nginx日志目录
 # "/usr/local/nginx/conf.d" Nginx配置文件目录
 # "/etc/letsencrypt/live/" SSL证书保存目录
-VOLUME ["/var/www","/usr/local/nginx/logs","/usr/local/nginx/conf.d","/etc/letsencrypt/live/"]
+VOLUME ["/var/www","/usr/local/nginx/logs","/usr/local/nginx/conf.d","/etc/letsencrypt/live"]
 
 EXPOSE 80 443
 
