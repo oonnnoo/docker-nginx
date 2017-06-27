@@ -16,8 +16,8 @@ NGINX 1.13.0
 docker run -d --name site -p 80:80 -p 443:443 \
 -v /var/www:/var/www \
 -v /etc/nginx/conf.d:/usr/local/nginx/conf.d \
--v /var/logs/nginx:/usr/local/nginx/logs \
--v /etc/letsencrypt:/etc/letsencrypt\
+-v /var/log/nginx:/usr/local/nginx/logs \
+-v /etc/letsencrypt:/etc/letsencrypt \
 onnno/nginx
 ```
 
