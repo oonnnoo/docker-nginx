@@ -3,7 +3,7 @@ FROM onnno/ubuntu:16.04-0.1.0
 MAINTAINER Dong Li "docker@lidong.me”
 
 ENV SSL_VERSION 1.0.2k
-ENV NGINX_VERSION 1.13.0
+ENV NGINX_VERSION 1.13.2
 
 RUN apt-get update \
 	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev \
