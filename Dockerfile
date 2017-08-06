@@ -1,9 +1,9 @@
-FROM onnno/ubuntu:16.04-0.1.0
+FROM onnno/ubuntu
 
 MAINTAINER Dong Li "docker@lidong.me”
 
 ENV SSL_VERSION 1.0.2k
-ENV NGINX_VERSION 1.13.2
+ENV NGINX_VERSION 1.13.3
 
 RUN apt-get update \
 	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev \
@@ -46,4 +46,4 @@ VOLUME ["/var/www","/usr/local/nginx/logs","/usr/local/nginx/conf.d","/etc/letse
 
 EXPOSE 80 443
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/nginx/sbin/nginx","-g", "daemon off;"]
