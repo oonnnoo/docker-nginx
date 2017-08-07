@@ -26,9 +26,9 @@ RUN apt-get update \
 	&& make \
 	&& make install \
 	&& /usr/local/nginx/sbin/nginx -V \
-	&& rm -rf master.zip \
+	&& cd / \
+	&& rm -rf openssl-$SSL_VERSION.tar.gz openssl-$SSL_VERSION nginx-$NGINX_VERSION.tar.gz nginx-$NGINX_VERSION master.zip \
 	&& rm -rf /ngx_http_substitutions_filter_module-master \
-	&& rm -rf /openssl \
 	&& rm -rf /var/lib/apt/lists/* \
 
 # forward request and error logs to docker log collector
