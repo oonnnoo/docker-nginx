@@ -5,8 +5,8 @@
 ## Feature
 
 ```
-OPENSSL 1.0.2k
-NGINX 1.13.2
+OPENSSL 1.1.1-pre7
+NGINX 1.15.0
 添加 `ngx_http_substitutions_filter_module` 模块，用于反向代理中替换过滤
 ```
 
