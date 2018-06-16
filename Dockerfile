@@ -8,11 +8,11 @@ ENV NGINX_VERSION 1.15.0
 RUN apt-get update \
 	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev git\
 	&& apt-get autoremove \
-# # 下载openssl
-# 	&& wget -c https://www.openssl.org/source/openssl-$SSL_VERSION.tar.gz \
-# 	&& tar zxf openssl-$SSL_VERSION.tar.gz \
-# 	&& mv openssl-$SSL_VERSION/ openssl \
-  && git clone -b tls1.3-draft-18 https://github.com/openssl/openssl.git \
+# 下载openssl
+	&& wget -c https://www.openssl.org/source/openssl-$SSL_VERSION.tar.gz \
+	&& tar zxf openssl-$SSL_VERSION.tar.gz \
+	&& mv openssl-$SSL_VERSION/ openssl \
+# && git clone -b tls1.3-draft-18 https://github.com/openssl/openssl.git \
 # 下载 ngx_http_substitutions_filter_module 模块，用于反向代理中替换过滤
 	&& wget -c https://github.com/yaoweibin/ngx_http_substitutions_filter_module/archive/master.zip \
 	&& unzip master.zip \
@@ -25,7 +25,7 @@ RUN apt-get update \
 	&& make install \
 	&& /usr/local/nginx/sbin/nginx -V \
 	&& cd / \
-	&& rm -rf openssl-$SSL_VERSION.tar.gz openssl-$SSL_VERSION nginx-$NGINX_VERSION.tar.gz nginx-$NGINX_VERSION master.zip \
+	&& rm -rf openssl-$SSL_VERSION.tar.gz openssl nginx-$NGINX_VERSION.tar.gz nginx-$NGINX_VERSION master.zip \
 	&& rm -rf /ngx_http_substitutions_filter_module-master \
 	&& rm -rf /var/lib/apt/lists/* \
 # forward request and error logs to docker log collector
