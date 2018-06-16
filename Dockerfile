@@ -6,7 +6,7 @@ ENV SSL_VERSION 1.1.1-pre7
 ENV NGINX_VERSION 1.15.0
 
 RUN apt-get update \
-	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev \
+	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev git\
 	&& apt-get autoremove \
 # # 下载openssl
 # 	&& wget -c https://www.openssl.org/source/openssl-$SSL_VERSION.tar.gz \
