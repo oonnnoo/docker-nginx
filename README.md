@@ -5,8 +5,8 @@
 ## Feature
 
 ```
-OPENSSL 1.1.1-pre7
-NGINX 1.15.0
+OPENSSL 1.1.1
+NGINX 1.15.3
 添加 `ngx_http_substitutions_filter_module` 模块，用于反向代理中替换过滤
 ```
 
@@ -34,3 +34,9 @@ Nginx 重启，并重新加载配置文件
 ```
 docker exec [Container_ID] /usr/local/nginx/sbin/nginx -s reload
 ```
+
+## notice
+
+镜像仅供参考，镜像的依赖、运行方式等可能会不定时修改。
+
+Nginx 配置参考 [ryanlid/nginx-conf](https://github.com/ryanlid/nginx-conf)
