@@ -2,9 +2,9 @@ FROM onnno/ubuntu
 
 MAINTAINER Dong Li "docker@lidong.me”
 
-ENV SSL_VERSION 1.1.1c
+ENV SSL_VERSION 1.1.1d
 
-ENV NGINX_VERSION 1.17.0
+ENV NGINX_VERSION 1.17.8
 
 RUN apt-get update \
 	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev git\
