@@ -1,6 +1,6 @@
-FROM onnno/ubuntu
+FROM ubuntu
 
-MAINTAINER Dong Li "docker@lidong.me”
+LABEL maintainer="docker@lidong.me"
 
 ENV SSL_VERSION 1.1.1d
 
