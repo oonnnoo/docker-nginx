@@ -2,9 +2,9 @@ FROM ubuntu
 
 LABEL maintainer="docker@lidong.me"
 
-ENV SSL_VERSION 1.1.1h
+ENV SSL_VERSION 1.1.1i
 
-ENV NGINX_VERSION 1.19.4
+ENV NGINX_VERSION 1.19.6
 
 RUN apt-get update \
 	&& apt-get install -y wget unzip gcc build-essential libpcre3 libpcre3-dev zlib1g-dev git\

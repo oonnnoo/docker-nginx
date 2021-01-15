@@ -5,10 +5,16 @@
 ## Feature
 
 ```
-OPENSSL 1.1.1h
-NGINX 1.19.4
+NGINX 1.19.6
+OPENSSL 1.1.1i
 添加 `ngx_http_substitutions_filter_module` 模块，用于反向代理中替换过滤
 ```
+
+http://nginx.org/en/download.html
+
+https://www.openssl.org/
+
+https://github.com/yaoweibin/ngx_http_substitutions_filter_module
 
 ## Use
 
