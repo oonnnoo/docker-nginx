@@ -24,7 +24,7 @@ docker run -d --name site -p 80:80 -p 443:443 \
 -v /etc/nginx/conf.d:/usr/local/nginx/conf.d \
 -v /var/log/nginx:/usr/local/nginx/logs \
 -v /etc/letsencrypt:/etc/letsencrypt \
-onnno/nginx
+ryanlid/nginx
 ```
 
 ## Useful command
@@ -46,3 +46,16 @@ docker exec [Container_ID] /usr/local/nginx/sbin/nginx -s reload
 镜像仅供参考，镜像的依赖、运行方式等可能会不定时修改。
 
 Nginx 配置参考 [ryanlid/nginx-conf](https://github.com/ryanlid/nginx-conf)
+
+## build
+
+```sh
+git clone https://github.com/ryanlid/docker-nginx.git
+# git clone git@github.com:ryanlid/docker-nginx.git
+docker build -t ryanlid/nginx .
+docker push ryanlid/nginx
+```
+
+```sh
+docker build github.com/ryanlid/nginx
+```
