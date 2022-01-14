@@ -47,15 +47,16 @@ docker exec [Container_ID] /usr/local/nginx/sbin/nginx -s reload
 
 Nginx 配置参考 [ryanlid/nginx-conf](https://github.com/ryanlid/nginx-conf)
 
-## build
+## Build
 
 ```sh
 git clone https://github.com/ryanlid/docker-nginx.git
 # git clone git@github.com:ryanlid/docker-nginx.git
+cd docker-nginx
 docker build -t ryanlid/nginx .
 docker push ryanlid/nginx
 ```
 
 ```sh
-docker build github.com/ryanlid/nginx
+docker build github.com/ryanlid/docker-nginx
 ```
