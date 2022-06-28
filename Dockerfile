@@ -20,7 +20,7 @@ RUN apt-get update \
 	&& wget -c https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \
 	&& tar xvf nginx-$NGINX_VERSION.tar.gz \
 	&& cd nginx-$NGINX_VERSION \
-	&& ./configure --with-http_v2_module --with-http_ssl_module --with-openssl=./../openssl/ --add-module=./../ngx_http_substitutions_filter_module-master/ --with-openssl-opt=enable-tls1_3\
+	&& ./configure --with-http_v2_module --with-http_ssl_module --with-openssl=./../openssl/ --add-module=./../ngx_http_substitutions_filter_module-master/ --with-openssl-opt=enable-tls1_3 --with-stream \
 	&& make \
 	&& make install \
 	&& /usr/local/nginx/sbin/nginx -V \
